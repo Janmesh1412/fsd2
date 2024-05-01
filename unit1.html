@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1. MAX AGE FINDING
+        var arr=[{"name":"a","age":25},{"name":"b","age":45},{"name":"c","age":35}]
+        var m =arr[0]
+        
+                
+        for(i in arr){
+            {
+                if (arr[i].age >m.age)
+                {
+                    m=arr[i]
+                }
+            }
+            
+        }
+        console.log(" name is "+m.name+" age is "+m.age)
+
+        //2. SORTING NAME ALPHABETICALLY
+        var o = new Array()
+
+        var test={"division1":{"name":["z","b","h"]},"division2":{"name":["y","a","g"]}}
+        for( i in test)
+        {  
+            for ( j in test[i])
+            {
+                o=o.concat(test[i][j])
+            }
+        }
+        console.log(o.sort())
+
+        //3. table
+
+        const sub={
+            'FSD':[
+                {'topic':'HTML','course':'Beginner','content':['tags','table1','form']},
+                {'topic':'CSS','course':'Beginner','content':['tags','table','form']}
+            ]
+        }
+        var temp="<table border='2 px'>"
+
+        for (var i in sub.FSD[0]) {
+                  temp+="<th>"+ i +"</th>"
+        }
+         temp += "</tr>"
+         for(x in sub.FSD){
+            temp+="<tr>"
+                for (y in sub.FSD[x])
+                {
+                    temp+="<td>"+sub.FSD[x][y]+"</td>"
+                }
+                temp+="</tr>"
+
+        }
+        temp+="</table>"
+        document.write(temp)
+        
+    </script>
+</head>
+<body>
+    <!-- 1. write a javascript code to store an array of objects having age and name display , 
+        name and age of person with the heighest age  -->
+
+    <!-- 2. write a java script to design two json object name as div1 and div2 having an array 
+        to store name of student this name should be sorted alphbetically in object and should be return 
+        and at last both div object shold be visible with name sorted alphabetically -->
+
+    <!-- 3.get json object value using for loop and make html table to display its value.key these should  heading 
+        and values as content  -->
+        
+</body>
+</html>
